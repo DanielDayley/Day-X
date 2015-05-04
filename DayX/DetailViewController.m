@@ -10,9 +10,15 @@
 
 @interface DetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation DetailViewController
+- (IBAction)clearButtonTapped:(id)sender {
+    self.textField.text = @"";
+    
+    self.textView.text = @"";
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

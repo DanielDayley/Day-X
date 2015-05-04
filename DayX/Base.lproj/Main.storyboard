@@ -73,20 +73,40 @@
                                 <rect key="frame" x="16" y="101" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Ouh-9u-r8o" id="2U3-6k-hgg"/>
-                                </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiD-IP-hAy">
+                                <rect key="frame" x="16" y="150" width="568" height="273"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt7-G7-t70">
+                                <rect key="frame" x="282" y="512" width="37" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="Ouh-9u-r8o" eventType="touchUpInside" id="erS-S2-M2G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="au7-nU-zOp" firstAttribute="leading" secondItem="m7h-3j-Bi8" secondAttribute="leadingMargin" id="Gay-RH-kzW"/>
-                            <constraint firstItem="au7-nU-zOp" firstAttribute="top" secondItem="HVZ-0O-xBc" secondAttribute="bottom" constant="37" id="iLc-WZ-cJu"/>
-                            <constraint firstItem="au7-nU-zOp" firstAttribute="trailing" secondItem="m7h-3j-Bi8" secondAttribute="trailingMargin" id="kiA-ZS-3fz"/>
+                            <constraint firstItem="SiD-IP-hAy" firstAttribute="trailing" secondItem="m7h-3j-Bi8" secondAttribute="trailingMargin" id="14k-zs-bh2"/>
+                            <constraint firstItem="au7-nU-zOp" firstAttribute="top" secondItem="HVZ-0O-xBc" secondAttribute="bottom" constant="37" id="A08-aE-QGe"/>
+                            <constraint firstItem="SiD-IP-hAy" firstAttribute="leading" secondItem="au7-nU-zOp" secondAttribute="leading" id="EZL-Ow-EKt"/>
+                            <constraint firstItem="SiD-IP-hAy" firstAttribute="centerX" secondItem="rt7-G7-t70" secondAttribute="centerX" id="ePo-aI-8a9"/>
+                            <constraint firstItem="Asc-gz-ulY" firstAttribute="top" secondItem="rt7-G7-t70" secondAttribute="bottom" constant="58" id="lN4-km-0VS"/>
+                            <constraint firstItem="SiD-IP-hAy" firstAttribute="top" secondItem="au7-nU-zOp" secondAttribute="bottom" constant="19" id="mmt-tM-bI0"/>
+                            <constraint firstItem="au7-nU-zOp" firstAttribute="trailing" secondItem="SiD-IP-hAy" secondAttribute="trailing" id="oCH-dd-uCL"/>
+                            <constraint firstItem="SiD-IP-hAy" firstAttribute="leading" secondItem="m7h-3j-Bi8" secondAttribute="leadingMargin" id="r7Q-0v-lLE"/>
+                            <constraint firstItem="rt7-G7-t70" firstAttribute="top" secondItem="SiD-IP-hAy" secondAttribute="bottom" constant="89" id="v8y-10-yhI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textField" destination="au7-nU-zOp" id="x87-V6-7Oh"/>
+                        <outlet property="textView" destination="SiD-IP-hAy" id="sEC-gH-LN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9F-x3-Bi3" userLabel="First Responder" sceneMemberID="firstResponder"/>
