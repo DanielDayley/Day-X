@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iaM-7Y-TGy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--ListViewController-->
@@ -25,6 +26,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9s-B2-kRX" id="RW1-y0-uvC">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ouh-9u-r8o" kind="show" identifier="viewEntry" id="rAu-sm-HTb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -41,13 +45,53 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xXp-3e-VAE">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="0Q7-kQ-zjy"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="0Q7-kQ-zjy">
+                            <connections>
+                                <segue destination="Ouh-9u-r8o" kind="show" identifier="addEntry" id="F7G-Uv-8ib"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <customObject id="yZ6-ri-QGx" customClass="ListTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1057" y="272"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="RwP-RB-gzl">
+            <objects>
+                <viewController id="Ouh-9u-r8o" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HVZ-0O-xBc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Asc-gz-ulY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m7h-3j-Bi8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="au7-nU-zOp">
+                                <rect key="frame" x="16" y="101" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ouh-9u-r8o" id="2U3-6k-hgg"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="au7-nU-zOp" firstAttribute="leading" secondItem="m7h-3j-Bi8" secondAttribute="leadingMargin" id="Gay-RH-kzW"/>
+                            <constraint firstItem="au7-nU-zOp" firstAttribute="top" secondItem="HVZ-0O-xBc" secondAttribute="bottom" constant="37" id="iLc-WZ-cJu"/>
+                            <constraint firstItem="au7-nU-zOp" firstAttribute="trailing" secondItem="m7h-3j-Bi8" secondAttribute="trailingMargin" id="kiA-ZS-3fz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="au7-nU-zOp" id="x87-V6-7Oh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9F-x3-Bi3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="272"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2ft-7r-KUw">
@@ -68,4 +112,7 @@
             <point key="canvasLocation" x="307" y="277"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rAu-sm-HTb"/>
+    </inferredMetricsTieBreakers>
 </document>
