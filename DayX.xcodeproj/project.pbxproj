@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68943B841AF8143D009C7E25 /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68943B831AF8143D009C7E25 /* ListTableViewDataSource.m */; };
-		68943B871AF81DDF009C7E25 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68943B861AF81DDF009C7E25 /* DetailViewController.m */; };
+		6496573C1AFAA50F0086F82B /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6496573B1AFAA50F0086F82B /* Entry.m */; };
+		6496573F1AFAA54D0086F82B /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6496573E1AFAA54D0086F82B /* EntryController.m */; };
+		64E7DFC31AF8258200335538 /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7DFC21AF8258200335538 /* ListTableViewDataSource.m */; };
+		64E7DFC61AF8286800335538 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7DFC51AF8286800335538 /* DetailViewController.m */; };
 		68FFDFDC1AD8144B009F5D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFDB1AD8144B009F5D0A /* main.m */; };
 		68FFDFDF1AD8144B009F5D0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFDE1AD8144B009F5D0A /* AppDelegate.m */; };
 		68FFDFE21AD8144B009F5D0A /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFE11AD8144B009F5D0A /* ListViewController.m */; };
@@ -29,10 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		68943B821AF8143D009C7E25 /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
-		68943B831AF8143D009C7E25 /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
-		68943B851AF81DDF009C7E25 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		68943B861AF81DDF009C7E25 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6496573A1AFAA50F0086F82B /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		6496573B1AFAA50F0086F82B /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		6496573D1AFAA54D0086F82B /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		6496573E1AFAA54D0086F82B /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
+		64E7DFC11AF8258200335538 /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
+		64E7DFC21AF8258200335538 /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
+		64E7DFC41AF8286800335538 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		64E7DFC51AF8286800335538 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		68FFDFD61AD8144B009F5D0A /* DayX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFDFDA1AD8144B009F5D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68FFDFDB1AD8144B009F5D0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,10 +97,14 @@
 				68FFDFDE1AD8144B009F5D0A /* AppDelegate.m */,
 				68FFDFE01AD8144B009F5D0A /* ListViewController.h */,
 				68FFDFE11AD8144B009F5D0A /* ListViewController.m */,
-				68943B821AF8143D009C7E25 /* ListTableViewDataSource.h */,
-				68943B831AF8143D009C7E25 /* ListTableViewDataSource.m */,
-				68943B851AF81DDF009C7E25 /* DetailViewController.h */,
-				68943B861AF81DDF009C7E25 /* DetailViewController.m */,
+				64E7DFC11AF8258200335538 /* ListTableViewDataSource.h */,
+				64E7DFC21AF8258200335538 /* ListTableViewDataSource.m */,
+				64E7DFC41AF8286800335538 /* DetailViewController.h */,
+				64E7DFC51AF8286800335538 /* DetailViewController.m */,
+				6496573D1AFAA54D0086F82B /* EntryController.h */,
+				6496573E1AFAA54D0086F82B /* EntryController.m */,
+				6496573A1AFAA50F0086F82B /* Entry.h */,
+				6496573B1AFAA50F0086F82B /* Entry.m */,
 				68FFDFE31AD8144B009F5D0A /* Main.storyboard */,
 				68FFDFE61AD8144B009F5D0A /* Images.xcassets */,
 				68FFDFE81AD8144B009F5D0A /* LaunchScreen.xib */,
@@ -229,10 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68943B871AF81DDF009C7E25 /* DetailViewController.m in Sources */,
+				6496573C1AFAA50F0086F82B /* Entry.m in Sources */,
+				64E7DFC61AF8286800335538 /* DetailViewController.m in Sources */,
 				68FFDFE21AD8144B009F5D0A /* ListViewController.m in Sources */,
 				68FFDFDF1AD8144B009F5D0A /* AppDelegate.m in Sources */,
-				68943B841AF8143D009C7E25 /* ListTableViewDataSource.m in Sources */,
+				6496573F1AFAA54D0086F82B /* EntryController.m in Sources */,
+				64E7DFC31AF8258200335538 /* ListTableViewDataSource.m in Sources */,
 				68FFDFDC1AD8144B009F5D0A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

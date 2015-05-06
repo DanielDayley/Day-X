@@ -2,40 +2,44 @@
 //  DetailViewController.m
 //  DayX
 //
-//  Created by Monica Platt on 5/4/15.
+//  Created by Daniel Dayley on 5/4/15.
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
 #import "DetailViewController.h"
+#import "EntryController.h"
 
 @interface DetailViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation DetailViewController
-- (IBAction)clearButtonTapped:(id)sender {
-    self.textField.text = @"";
-    
-    self.textView.text = @"";
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField
-{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
-
+- (IBAction)clearButtonTapped:(id)sender {
+    self.textField.text = @"";
+    self.textView.text = @"";
+}
+- (IBAction)saveButtonTapped:(id)sender {
+    EntryController *entryController = [[EntryController alloc] init];
+    [entryController createEntryWithTitle:self.textField.text bodyText:self.textView.text];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 /*
 #pragma mark - Navigation
