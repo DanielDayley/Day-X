@@ -28,14 +28,24 @@
     self.textView.text = @"";
 }
 - (IBAction)saveButtonTapped:(id)sender {
-    EntryController *entryController = [[EntryController alloc] init];
-    [entryController createEntryWithTitle:self.textField.text bodyText:self.textView.text];
+    if (self.entry) {
+        [EntryController sharedInstance].entries.
+    }
+    else{
+        [[EntryController sharedInstance] createEntryWithTitle:self.textField.text bodyText:self.textView.text];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.textField.text = self.entry.title;
 }
 
 

@@ -31,16 +31,16 @@
 
 - (void)addEntry:(Entry *)entry
 {
-    NSMutableArray  *mutableEntries = self.entries.mutableCopy;
+    NSMutableArray  *mutableEntries = [[NSMutableArray alloc]initWithArray:self.entries];
     [mutableEntries addObject:entry];
-    self.entries = self.entries.mutableCopy; // Can we do this?
+    [EntryController sharedInstance].entries = mutableEntries;
 }
 
 - (void)removeEntry:(Entry *)entry
 {
-    NSMutableArray  *mutableEntries = self.entries.mutableCopy;
-    [mutableEntries removeObject:entry];  // Not sure if we need to seearch for the index before we remove the object here.
-    self.entries = self.entries.mutableCopy; // Can we do this?
+    NSMutableArray  *mutableEntries = [[NSMutableArray alloc]initWithArray:self.entries];
+    [mutableEntries removeObject:entry];
+    [EntryController sharedInstance].entries = mutableEntries;
 }
 - (Entry *)createEntryWithTitle:(NSString *)title bodyText:(NSString*)bodyText
 {

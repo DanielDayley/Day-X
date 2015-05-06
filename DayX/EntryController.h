@@ -14,6 +14,7 @@
 - (void)addEntry:(Entry *)entry;
 - (void)removeEntry:(Entry *)entry;
 - (Entry *)createEntryWithTitle:(NSString *)title bodyText:(NSString*)bodyText;
++ (EntryController *)sharedInstance;
 
 
 @end
