@@ -29,7 +29,8 @@
 }
 - (IBAction)saveButtonTapped:(id)sender {
     if (self.entry) {
-        [EntryController sharedInstance].entries.
+        self.entry.title = self.textField.text;
+        self.entry.bodyText = self.textView.text;
     }
     else{
         [[EntryController sharedInstance] createEntryWithTitle:self.textField.text bodyText:self.textView.text];
